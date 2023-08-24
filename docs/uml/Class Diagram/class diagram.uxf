@@ -1,0 +1,187 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>907</x><y>250</y><w>300</w><h>320</h></coordinates><panel_attributes>Order
+--
+-Order State: state
+-id : int 
+-tableNumber: int {readOnly}
+-date: Date {readOnly}
+-isPaid: boolean
+--
++getId():Int{query}
++getOrderLines(): ArrayList&lt;OrderLines()&gt; {query}
++getCustomer(): Customer {query}
++getOrderState(): State {query}
++getTableNumber(): int {query}
++getTotalCost(): double {query}
++getDate(): Date {query}
++isPaid(): boolean
++setStateCompleted()
++setOrderChef(chef:Chef)
++setStateCancelled()
++setQuantity(quantity:int)
++addOrderLine(orderLine : OrderLine)
++removeOrderLine(orderLine : OrderLine)
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>527</x><y>370</y><w>240</w><h>220</h></coordinates><panel_attributes>Customer
+--
+-Balance : double 
+-cardNumber : String 
+-cardHolderName : String 
+-CVV : String
+--
++changeBankDetails(cardNumber:String,
+cardHolderName:String, cvv:String)
++getCardNumber(): String {query}
++getCVV() : String {query}
++getCardHolderName(): String {query}
++getBalance(): double {query}
++transaction(money:double)
++topUp(money:int)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>777</x><y>700</y><w>270</w><h>290</h></coordinates><panel_attributes>Restaurant
+--
+-id: int {readOnly}
+-name : String {readOnly}
+-telephone : String {readOnly}
+-totalTables : int
+-counter: int
+--
++getRestaurantName() :String {query}
++getTelephone() : String {query}
++getTotalTables(): int {query}
++getAddress(): Adress {query}    
++getChefs(): ArrayList&lt;Chef&gt; {query}
++addChef(chef: Chef)
++changeTotalTables(total:int): 
++getDishes():ArrayList&lt;Dish&gt; {query}
++addDish(dish: Dish){
++addOrder(order:Order)
++getOrders():ArrayList&lt;Order&gt;{query}
++getId() : int {query}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1187</x><y>790</y><w>280</w><h>220</h></coordinates><panel_attributes>Owner
+--
+-iban : String {readOnly}
+-tin : String {readOnly}
+-income: double
+--
++changeBankDetails(cardNumber:String,
+cardHolderName:String, cvv:String)
++getIban(): String {query}
++changeIban(iban:String)
++getTin(): String {query}
++getRestaurants: ArrayList&lt;Restaurant&gt; {query}
++addRestaurant(restaurant: Restaurant)
++addMoney(money:int)
++getIncome():double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1037</x><y>790</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+Manages</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1317</x><y>300</y><w>210</w><h>160</h></coordinates><panel_attributes>Order Line
+--
+-quantity : int
+-/subTotalCost : Money
+--
++getQuantity(): int {query}
++getDish(): Dish {query}
++getSubTotalCost(): double {query}
++setQuantity(quantity:int)
++IncrementOrderLineQuantity()
++DecrementOrderLineQuantity()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1197</x><y>300</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+consists of</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1597</x><y>310</y><w>200</w><h>130</h></coordinates><panel_attributes>Dish
+--
+-id : int {readOnly}
+-dishName: String {readOnly}
+-Price : double {readOnly}
+--
++getDishName() : String {query}
++getDishWorth() : String {query}
++getId() :int {query}
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1517</x><y>300</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1
+contains</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>437</x><y>0</y><w>250</w><h>310</h></coordinates><panel_attributes>User
+--
+-userId :int
+-username : String
+-password : String
+-name : String
+-surname : String
+-email :String 
+-tel : String
+--
++changePersonalDetails(username:String, 
+name:String, surname:String,
+telephone:String, email:String)
++getUserId(): int {query}
++getUsername(): String {query}
++getName():String {query}
++getSurname():String {query}
++getTelephone():String {query}
++getEmail():String {query}
++getPassword(): String {query}
++changePassword(pass:String)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>497</x><y>300</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;120;50;120;70</additional_attributes></element><element><id>Relation</id><coordinates><x>307</x><y>300</y><w>220</w><h>290</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;50;10;50;10;270</additional_attributes></element><element><id>UMLClass</id><coordinates><x>187</x><y>570</y><w>270</w><h>210</h></coordinates><panel_attributes>Chef
+--
+-iban : String 
+-tin : String 
+--
++changePersonalDetails(username:String, 
+name:String, surname:String,
+telephone:String, email:String,tin:String)
++changeIban(iban:String)
++getIban(): String {query}
++getTin(): String {query}
++addOrder(order : Order) {query}
++getOrders(): ArrayList&lt;Order&gt; {query}
++removeOrder(order:Order):boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>447</x><y>670</y><w>350</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2=1
+Works for</panel_attributes><additional_attributes>10;10;30;10;30;150;330;150</additional_attributes></element><element><id>Relation</id><coordinates><x>757</x><y>320</y><w>170</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+Places</panel_attributes><additional_attributes>10;140;100;140;100;10;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>557</x><y>990</y><w>210</w><h>160</h></coordinates><panel_attributes>Address
+--
+-streetNumber : int {readOnly}
+-streetName : String {readOnly}
+-ZC : zipcode {readOnly}
+-city : String {readOnly}
+--
++getStreetNumber(): int {query}
++getStreetName(): String {query}
++getZipCode(): int {query}
++getCity(): String {query}
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>677</x><y>860</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>100;10;10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>447</x><y>560</y><w>530</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=*
+works on</panel_attributes><additional_attributes>10;60;500;60;500;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>947</x><y>50</y><w>160</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+state
+--
+received
+cancelled
+completed
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1027</x><y>160</y><w>30</w><h>110</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1037</x><y>430</y><w>660</w><h>290</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..*
+m2=1
+Has</panel_attributes><additional_attributes>640;10;10;270</additional_attributes></element><element><id>Relation</id><coordinates><x>147</x><y>340</y><w>1170</w><h>920</h></coordinates><panel_attributes>lt=-
+
+
+</panel_attributes><additional_attributes>1150;670;1150;880;10;880;10;10;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1007</x><y>560</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2= 1</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element></diagram>

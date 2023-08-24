@@ -1,0 +1,25 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><element><id>UMLGeneric</id><coordinates><x>598</x><y>169</y><w>130</w><h>39</h></coordinates><panel_attributes>:Customer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>182</x><y>0</y><w>78</w><h>143</h></coordinates><panel_attributes>Χρήστης</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>208</x><y>182</y><w>26</w><h>1066</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>156</y><w>403</w><h>52</h></coordinates><panel_attributes>lt=&lt;.
+Create</panel_attributes><additional_attributes>290;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>117</y><w>39</w><h>1287</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;970</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>195</y><w>39</w><h>1235</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;930</additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>299</y><w>455</w><h>65</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setPersonalDetails(username, firstName
+, lastName , tel, email)</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>650</x><y>325</y><w>26</w><h>117</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>949</y><w>455</w><h>52</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setPassword(password)</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>1183</y><w>468</w><h>52</h></coordinates><panel_attributes>lt=&lt;.
+Successful Registration Message</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>0</x><y>221</y><w>819</w><h>299</h></coordinates><panel_attributes>loop
+--
+[while personal 
+details are invalid]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>169</x><y>351</y><w>559</w><h>143</h></coordinates><panel_attributes>opt
+--
+[invalid details]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>416</y><w>468</w><h>52</h></coordinates><panel_attributes>lt=&lt;.
+Error message</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>169</x><y>663</y><w>559</w><h>143</h></coordinates><panel_attributes>opt
+--
+[invalid bank details]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>728</y><w>468</w><h>52</h></coordinates><panel_attributes>lt=&lt;.
+Error Message</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>650</x><y>637</y><w>26</w><h>117</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>0</x><y>533</y><w>819</w><h>299</h></coordinates><panel_attributes>loop
+--
+[while bank
+details are invalid]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>650</x><y>975</y><w>26</w><h>117</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>156</x><y>1001</y><w>598</w><h>143</h></coordinates><panel_attributes>opt
+--
+[weak password inserted]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>0</x><y>871</y><w>819</w><h>299</h></coordinates><panel_attributes>loop
+--
+[while password is weak]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>1066</y><w>468</w><h>52</h></coordinates><panel_attributes>lt=&lt;.
+Error Message</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>Relation</id><coordinates><x>221</x><y>611</y><w>455</w><h>65</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setBankDetails(cardholderName, 
+CVV, cardNumber)</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element></diagram>

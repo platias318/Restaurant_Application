@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround9"
+    tools:context="gr.aueb.softeng.view.Owner.RestaurantDetails.RestaurantDetailsActivity">
+
+    <TextView
+        android:id="@+id/RestaurantNameDetailText"
+        android:layout_width="408dp"
+        android:layout_height="54dp"
+        android:background="#DF5C1368"
+        android:text="@string/restaurant_name1"
+        android:textColor="#D19944"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/RestaurantIdDetailText"
+        android:layout_width="410dp"
+        android:layout_height="51dp"
+        android:background="#DF5C1368"
+        android:text="@string/restaurant_id"
+        android:textColor="#D19944"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/RestaurantTablesDetailText"
+        android:layout_width="413dp"
+        android:layout_height="56dp"
+        android:background="#DF5C1368"
+
+        android:text="@string/restaurant_tables"
+        android:textColor="#D19944"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
+
+    <TextView
+        android:id="@+id/RestaurantAddressStreetText"
+        android:layout_width="412dp"
+        android:layout_height="61dp"
+        android:background="#DF5C1368"
+        android:text="@string/restaurant_address_street"
+        android:textColor="#D19944"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <TextView
+        android:id="@+id/RestaurantAddressNumberText"
+        android:layout_width="409dp"
+        android:layout_height="52dp"
+        android:text="@string/restaurant_address_number"
+        android:textColor="#D19944"
+        android:background="#DF5C1368"
+
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/RestaurantAddressZCText"
+        android:layout_width="418dp"
+        android:layout_height="51dp"
+        android:background="#DF5C1368"
+        android:text="@string/restaurant_zc"
+
+        android:textColor="#D19944"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <TextView
+        android:id="@+id/RestaurantCityText"
+        android:layout_width="407dp"
+        android:layout_height="57dp"
+        android:background="#DF5C1368"
+        android:text="@string/restaurant_city"
+        android:textColor="#D19944"
+
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
+
+    <Button
+        android:id="@+id/ExtractStatsButton"
+        android:layout_width="111dp"
+        android:layout_height="85dp"
+        android:background="#ED9C27B0"
+        android:text="@string/statistics4"
+        android:textAllCaps="false"
+        android:textColor="#D19944"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/GoBack2"
+        android:layout_width="111dp"
+        android:layout_height="85dp"
+        android:background="#ED9C27B0"
+        android:text="@string/go_back7"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="#D19944"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/addChefButton"
+        android:layout_width="111dp"
+        android:layout_height="85dp"
+        android:background="#ED9C27B0"
+        android:text="@string/dd_chef"
+        android:textAllCaps="false"
+        android:textColor="#D19944"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

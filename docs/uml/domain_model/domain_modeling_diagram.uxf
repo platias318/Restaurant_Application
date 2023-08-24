@@ -1,0 +1,85 @@
+<diagram program="umletino" version="15.1"><zoom_level>1</zoom_level><help_text>Par</help_text><element><id>UMLClass</id><coordinates><x>408</x><y>289</y><w>20</w><h>12</h></coordinates><panel_attributes>Order
+--
+Order State: state
+tableNumber: int
+/TotalCost : Money
+time: String
+date: Date
+isPaid(): boolean
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>369</x><y>299</y><w>21</w><h>18</h></coordinates><panel_attributes>Customer
+--
+Balance : Money
+card number : long 
+card holder name : String
+CVV : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>336</y><w>27</w><h>13</h></coordinates><panel_attributes>Restaurant
+--
+restaurant Name : String
+buisness Telephone : Telephone Number
+totalTables : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>433</x><y>336</y><w>20</w><h>15</h></coordinates><panel_attributes>Owner
+--
+TIN : Taxpayer Id No:
+IBAN : String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>418</x><y>336</y><w>17</w><h>5</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+Manages</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>289</y><w>15</w><h>12</h></coordinates><panel_attributes>Order Line
+--
+Quantity : int
+/subTotalCost : Money</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>427</x><y>289</y><w>15</w><h>5</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+consists of</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>464</x><y>289</y><w>14</w><h>8</h></coordinates><panel_attributes>Dish
+--
+Dish Number : dishId
+Dish name: String
+Price : Money 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>454</x><y>288</y><w>12</w><h>5</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+contains</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>358</x><y>265</y><w>19</w><h>20</h></coordinates><panel_attributes>User
+--
+username : String
+password : String
+name : String
+surname : String
+email :email Address 
+telephone : telephone Number
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>364</x><y>284</y><w>14</w><h>17</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;120;80;120;150</additional_attributes></element><element><id>Relation</id><coordinates><x>345</x><y>284</y><w>22</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;80;10;80;10;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>341</x><y>314</y><w>16</w><h>13</h></coordinates><panel_attributes>Chef
+--
+IBAN : String
+TIN : Taxpayer Id No
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>356</x><y>324</y><w>38</w><h>18</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+Works for</panel_attributes><additional_attributes>10;10;60;10;60;150;360;150</additional_attributes></element><element><id>Relation</id><coordinates><x>389</x><y>289</y><w>21</w><h>17</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+Places</panel_attributes><additional_attributes>10;140;110;140;110;10;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>379</x><y>354</y><w>14</w><h>13</h></coordinates><panel_attributes>Address
+--
+Number : int 
+Street name : String
+ZC : zipcode
+city : String
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>345</y><w>10</w><h>11</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>356</x><y>300</y><w>65</w><h>23</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+works on</panel_attributes><additional_attributes>10;200;620;200;620;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>409</x><y>267</y><w>20</w><h>12</h></coordinates><panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+state
+--
+received
+preparing
+cancelled
+ready
+completed
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>417</x><y>278</y><w>3</w><h>13</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>404</x><y>296</y><w>70</w><h>42</h></coordinates><panel_attributes>lt=-
+m1=1..*
+m2=1
+Has</panel_attributes><additional_attributes>680;10;10;400</additional_attributes></element><element><id>Relation</id><coordinates><x>329</x><y>291</y><w>117</w><h>92</h></coordinates><panel_attributes>lt=-
+
+
+</panel_attributes><additional_attributes>1150;600;1150;880;10;880;10;10;260;10</additional_attributes></element></diagram>

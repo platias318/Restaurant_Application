@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround3"
+    android:backgroundTint="#D0FFFFFF"
+    android:backgroundTintMode="src_atop"
+    tools:context="gr.aueb.softeng.view.Customer.HomePage.CustomerHomePageActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/CustomerHomePageTabLayout"
+        android:layout_width="359dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#FFA400"
+        app:tabRippleColor="#020101">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/CurrentOrderTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/order_history"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/OrderHistoryTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_order"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="195dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ImageButton
+        android:id="@+id/TopUpButton"
+        android:layout_width="39dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CustomerHomePageTabLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@drawable/wallet"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/CustomerHomePageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="677dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CustomerHomePageTabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
